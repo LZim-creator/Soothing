@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You :)</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      background: #fff;
+    }
+    .stick {
+      font-size: 80px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>I know I be saying dumb stuff sometimes...</h1>
+<div class="stick">🤦🏾‍♂️</div>
+
+<button onclick="next()">Next</button>
+
+<audio id="song" src="your-song.mp3"></audio>
+
+<script>
+let step = 0;
+
+function next() {
+  step++;
+
+  if(step == 1){
+    document.body.innerHTML = `
+    <h1>But I actually like you fr</h1>
+    <div class="stick">🙂❤️</div>
+    <button onclick="next()">Next</button>`;
+  }
+
+  else if(step == 2){
+    document.body.innerHTML = `
+    <h1>Like... this type of like</h1>
+    <div class="stick">🥺💗</div>
+    <button onclick="playSong()">Play</button>
+    <audio id="song" src="your-song.mp3"></audio>`;
+  }
+}
+
+function playSong(){
+  document.getElementById("song").play();
+}
+</script>
+
+</body>
+</html>
